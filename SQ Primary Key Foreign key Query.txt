@@ -1,0 +1,61 @@
+CREATE TABLE Department(
+  D_no INT PRIMARY KEY,
+  D_name VARCHAR (20)
+);
+
+INSERT INTO Department(D_no, D_name) VALUES(1,'HR');
+INSERT INTO Department(D_no, D_name) VALUES(2, 'Finance');
+INSERT INTO Department(D_no, D_name) VALUES(3, 'Marketing');
+INSERT INTO Department(D_no, D_name) VALUES(4, 'IT');
+INSERT INTO Department(D_no, D_name) VALUES(5, 'Operations');
+
+CREATE TABLE Employee(
+  Emp_no INT PRIMARY KEY,
+  E_Name VARCHAR(20),
+  D_name VARCHAR(20),
+  Hire_Date DATE,
+  Salary INT,
+  D_no INT,
+  FOREIGN KEY(D_no) REFERENCES Department(D_no)
+);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(1, 'aBC', 'hr', '2022-01-01', 50000, 1);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(2, 'PQR', 'Finance', '2022-02-01', 40000, 2);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(3, 'XYZ', 'MArketing', '2022-03-01', 30000, 3);
+
+
+
+CREATE TABLE Department(
+  D_no INT PRIMARY KEY,
+  D_name VARCHAR (20)
+);
+
+INSERT INTO Department(D_no, D_name) VALUES(1,'HR');
+INSERT INTO Department(D_no, D_name) VALUES(2, 'Finance');
+INSERT INTO Department(D_no, D_name) VALUES(3, 'Marketing');
+INSERT INTO Department(D_no, D_name) VALUES(4, 'IT');
+INSERT INTO Department(D_no, D_name) VALUES(5, 'Operations');
+
+CREATE TABLE Employee(
+  Emp_no INT PRIMARY KEY,
+  E_Name VARCHAR(20),
+  D_name VARCHAR(20),
+  Hire_Date DATE,
+  Salary INT,
+  D_no INT,
+  FOREIGN KEY(D_no) REFERENCES Department(D_no)
+);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(1, 'aBC', 'hr', '2022-01-01', 50000, 1);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(2, 'PQR', 'Finance', '2022-02-01', 40000, 2);
+
+INSERT INTO Employee(Emp_no, E_Name,  D_name , Hire_Date, Salary, D_no) 
+VALUES(3, 'XYZ', 'MArketing', '2022-03-01', 30000, 3); 
